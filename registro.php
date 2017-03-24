@@ -33,8 +33,6 @@ print_r('$_REQUEST');
 		
         ?>             
                      
-
-
      <?php
 //configuración base de datos
      $host="localhost";
@@ -45,7 +43,7 @@ print_r('$_REQUEST');
      mysql_select_db($db,$enlace);
   
 //Query de ingreso de datos
-     $consulta= mysql_query("insert into registrados (nombre,apellido,doc_num,type_doc,email,contraseña)"
+     $consulta= mysql_query("insert into registrados (nombre,apellido,num_doc,tipo_doc,email,contraseña)"
              . " values ('$name','$last_name','$user','$email''$type_doc','$passw')",$enlace);
      ?>
   
