@@ -27,10 +27,10 @@ print_r('$_REQUEST');
         $email=$_POST['correo'];
         $passw=$_POST['contraseña'];
         //$passw2=$_POST['contraseña2'];
-        $type_doc=$_POST['type_doc'];
-        //$type_doc2=$_POST['ti']
-       // $type_doc3=$_POST['ce']
-       // $type_doc4=$_POST['dni']
+	 $doc_g=array('cc','ti','ce','dni');//arreglo que agrupa los tipos de documento
+	// print_r('$doc_g');
+        $type_doc=$_POST['type_doc'].$doc_g;//llamado del campo del formulario
+		
         ?>             
                      
 
