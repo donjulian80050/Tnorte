@@ -1,0 +1,45 @@
+admin_tnorte
+Adm1n7norte
+
+
+Roles
+administrador
+sub-admin
+ventas
+
+campos: data_created tiemstamp(6)
+	id_role int(6)
+	nombre_role varchar(20)
+	description varchar(100)
+
+tipo_doc:
+
+campos: data_created tiemstamp(6)
+	id_doc int(10)
+	doc varchar(10)
+	descripcion varchar(100)
+cc
+ti
+ce
+
+
+jqury
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+jd_admin 1
+id doc
+id role
+____________________________________________________________
+
+Cpanel
+
+tncol2016
+Jdonado2013#
+
+sql
+
+tnorte_admin
+hyiuohi80u9-0UI#*
