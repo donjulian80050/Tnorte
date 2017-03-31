@@ -1,4 +1,10 @@
 <html>
+
+<?php
+//Imprimir datos de envio de informacióny a donde está llegando
+print_r('$_REQUEST');
+?>
+
     <head>
         <meta charset="UTF-8">
         <title>Crea tu usuario</title>
@@ -6,18 +12,16 @@
     </head>
 
  <body>
+  
+  
    
 
    <?php
     include("header.php");
     ?>
+        
+       
          
-<?php
-//Imprimir datos de envio de informacióny a donde está llegando
-print_r('$_REQUEST');
-?>
-
-
      <?php
 	 
 //Para halar los datos del formulario "creación de usuarios"
@@ -28,8 +32,7 @@ print_r('$_REQUEST');
         $passw=$_POST['contraseña'];
         //$passw2=$_POST['contraseña2'];
 	 $doc_g=array('cc','ti','ce','dni');//arreglo que agrupa los tipos de documento
-	// print_r('$doc_g');
-        $type_doc=$_POST['type_doc'].$doc_g;//llamado del campo del formulario
+	    $type_doc=$_POST['tipo_doc'].$doc_g;//llamado del campo del formulario
 		
         ?>             
                      
@@ -43,8 +46,7 @@ print_r('$_REQUEST');
      mysql_select_db($db,$enlace);
   
 //Query de ingreso de datos
-     $consulta= mysql_query("insert into registrados (nombre,apellido,num_doc,tipo_doc,email,contraseña)"
-             . " values ('$name','$last_name','$user','$email''$type_doc','$passw')",$enlace);
+     $consulta= mysql_query("insert into registrados (nombre,apellido,tipo_doc,num_doc,email,contrasena) values ('$name','$last_name','$type_doc','$user','$email','$passw')",$enlace);
      ?>
   
   <strong>Felicidades!!  Su registro se ha realizado exitosamente.</strong>
@@ -53,5 +55,4 @@ print_r('$_REQUEST');
  </body>
 
 </html>
-
 
